@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --white: #fff;
+    --black-80: hsl(0, 0%, 20%);
+    --black-40: hsl(0, 0%, 60%);
+    --blue: #0075DC;
+    --sm: 16px; 
+    --md: 24px;
+    --lg: 32px; 
+    --xl: 40px; 
+    --xxl: 80px; 
+}
+@font-face {
+    font-family: SF-Pro-Text-Bold;
+    src: url('../font/SF-Pro-Text-Bold.otf');
+}
+@font-face {
+    font-family: SF-Pro-Text-Semibold;
+    src: url('../font/SF-Pro-Text-Semibold.otf');
+}
+@font-face {
+    font-family: SF-Pro-Text-Light;
+    src: url('../font/SF-Pro-Text-Light.otf');
+}
+@font-face {
+    font-family: SF-Pro-Text-Regular;
+    src: url('../font/SF-Pro-Text-Regular.otf');
+}
+body{
+    font-family: 'SF-Pro-Text-Light', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black-80);
+    min-height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    /* overflow-y: hidden; */
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+    color: var(--black-40);
+    /* -webkit-user-select: none; */
+    -webkit-tap-highlight-color: transparent;
+}
+a:hover{
+    color: var(--blue);
+}
+ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+ul li{
+    padding: 0 24px; margin-left: var(--md);
+}
+ul:first-child li{
+    padding-left: 0;
+}
+::selection{
+    color: var(--white);
+    background-color: var(--black-80);
+}
+section{
+    min-height: calc(100vh - 60px);
+    padding: var(--xl);
+}
+.active{
+    color: var(--blue);
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    /* display: flex; */
+}
+.fs-heading{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: var(--lg);
+}
+.fs-title{
+    font-size: 32px;
+}
+.fs-sub{
+    font-size: 18px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: var(--md);
+    color: black;
+    font-weight: bolder;
+}
+.fs-body{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 8px;
+}
+.fs-caption{
+    font-size: 14px;
+}
+.fs-semibold{
+    font-family: SF-Pro-Text-Semibold;
+}
+.fs-heading,.fs-title, .fs-body, .fs-caption{
+    color: var(--black-80);
+} 
+/* SPACING________ */
+.t-sm{margin-top: var(--sm);} 
+.b-sm{margin-bottom: var(--sm);} 
+.l-sm{margin-left: var(--sm);} 
+.r-sm{margin-right: var(--sm);} 
+
+.t-md{margin-top: var(--md);} 
+.b-md{margin-bottom: var(--md);} 
+.l-md{margin-left: var(--md);} 
+.r-md{margin-right: var(--md);} 
+
+.t-lg{margin-top: var(--lg);} 
+.b-lg{margin-bottom: var(--lg);} 
+.l-lg{margin-left: var(--lg);} 
+.r-lg{margin-right: var(--lg);} 
+
+.t-xl{margin-top: var(--xl);} 
+.b-xl{margin-bottom: var(--xl);} 
+.l-xl{margin-left: var(--xl);} 
+.r-xl{margin-right: var(--xl);}
+
+.t-xxl{margin-top: var(--xxl);} 
+.b-xxl{margin-bottom: var(--xxl);} 
+.l-xxl{margin-left: var(--xxl);} 
+.r-xxl{margin-right: var(--xxl);}
+/* ____________________ */
+.project-section{
+    margin: var(--xxl) 0 var(--xxl) 0;
+}
+.top {
+    --offset: 100px; 
+    position: sticky;
+    left: 95%;
+    bottom: 24px; 
+    margin-top: calc(100vh + var(--offset));     
+    /* visual styling */
+    text-decoration: none;
+    padding: 16px;
+    color: #fff;
+    background: var(--black-40);
+    border-radius: 100px;
+    white-space: nowrap;
+}
+.top:hover{
+    background: black;
+    color: #fff;
+}
+  
+@media (min-width: 740px) and (max-width: 1023px){
+    .container{
+        width: 100%;
+        padding: 0 32px;
+    }
+    :root{
+        --sm:16px; 
+        --md:16px;
+        --lg:24px; 
+        --xl:32px; 
+        --xxl:40px; 
+    }
+}
+@media only screen and (max-width: 739px){
+    .container{
+        width: 100%;
+        padding: 0 24px;
+    }
+    :root{
+        --sm:16px; 
+        --md:16px;
+        --lg:24px; 
+        --xl:32px; 
+        --xxl:40px; 
+    } 
+    .fs-heading{
+        font-size: 24px;
+    }
+    .fs-sub{
+        font-size: 16px;
+    }
+    .fs-caption{
+        font-size: 12px;
+    }
+}

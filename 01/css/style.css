@@ -192,6 +192,9 @@ PROJECT PAGE====================================================================
     color: var(--white);
     background-color: #00549e;
 }
+.about-layout{
+    align-items: center;
+}
 @media (max-width: 1023px){
     .nav_btn{
         display: block;

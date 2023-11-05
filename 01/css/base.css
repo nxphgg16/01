@@ -91,7 +91,7 @@ section{
     font-size: 32px;
 }
 .fs-sub{
-    font-size: 18px;
+    font-size: var(--lg);
     text-transform: uppercase;
     display: block;
     margin-bottom: var(--md);
